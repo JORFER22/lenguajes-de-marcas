@@ -6,16 +6,27 @@ body {
     color: aliceblue;
     text-align: center;
 }
-.caja {
+#caja-uno{
     width: 70%;
     margin: 20px;
     padding: 5%;
-    border: 5px solid white;
+    background-color: forestgreen;
+    border: 20px dashed hotpink;
 
 }
-#caja-dos {
-    background-color: blanchedalmond;
-    border: 20px dashed chocolate;
+#caja-dos{
+    width: 70%;
+    margin: 20px;
+    padding: 5%;
+    background-color: fuchsia;
+    border: 20px dashed goldenrod;
     
     
+}
+#caja-tres{
+    width: 70%;
+    margin: 20px;
+    padding: 5%;
+    background-color: brown;
+    border: 20px dashed navy;
 }
