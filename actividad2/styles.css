@@ -1,85 +1,74 @@
-.container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 3fr 2fr;
-  gap: 0px 3px;
-  grid-auto-flow: row;
-  grid-template-areas:
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 0.6fr 1.4fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
     "cajalogo1 cajalogo2 cajalogo3 cajalogo4 cajalogo5"
-    "textologo1 textologo2 textologo3 textologo4 textologo5";
-    width: 100%;
-    height: 100%;
-    margin: 0%;
-    padding: 0%;
+    "textologo1 textologo2 textologo3 textologo4 textologo5"; 
 }
-
 .cajalogo1 { grid-area: cajalogo1; }
-
 .cajalogo2 { grid-area: cajalogo2; }
-
 .cajalogo3 { grid-area: cajalogo3; }
-
 .cajalogo4 { grid-area: cajalogo4; }
-
 .cajalogo5 { grid-area: cajalogo5; }
-
 .textologo1 { grid-area: textologo1; }
-
 .textologo2 { grid-area: textologo2; }
-
 .textologo3 { grid-area: textologo3; }
-
 .textologo4 { grid-area: textologo4; }
-
 .textologo5 { grid-area: textologo5; }
 
-.cajalogo1{
-  padding-bottom: 20%;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 3%;
+.cajalogo1, .cajalogo2, .cajalogo3, .cajalogo4, .cajalogo5{
+  
+  padding-right: 35%;
+  padding-left: 10%;
 }
-.cajalogo2{
-  padding-bottom: 20%;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 3%;
-}
-.cajalogo3{
-  padding-bottom: 20%;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 3%;
-}
-.cajalogo4{
-  padding-bottom: 20%;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 3%;
-}
-.cajalogo5{
-  padding-bottom: 20%;
-  padding-left: 5%;
-  padding-right: 3%;
-  padding-top: 3%;
-}
+
 .circulogris{
-    background-color: rgb(214, 212, 212);
+    background-color: rgb(242, 242, 242);
     border-radius: 50%;
-    height: 70%;
-    width: 70s%;
+    height: 38%;
+    width: 150%;
     overflow: hidden;
-    padding-left: 5%;
-    display: block;
-    
+    z-index: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 img{
-  width: 75%;
-  height: 75%;
-  padding-left: 10%;
-  padding-top: 12%;
+  width: 120%;
+  height: 130%;
 }
 .circulorojo{
-  background-color: rgba(255, 0, 0, 0.74);
-
+  background-color: rgb(247, 49, 82);
+  border-radius: 50%;
+  overflow: hidden;
+  height: 10%;
+  width: 37%;
+  position: relative;
+  top: 11%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numero{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(253, 254, 255);
+  font-size: xx-large;
+  font-weight:bold ;
+}
+.textologo1, .textologo2, .textologo3, .textologo4, .textologo5 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+  align-items: flex;
+  justify-content: center; 
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  bottom: 37%;
+  left: 20%;
+  
+  
 }
