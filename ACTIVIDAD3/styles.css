@@ -7,6 +7,9 @@ table.darkTable {
   text-align: center;
   border-collapse: collapse;
 }
+html{
+  background-color: rgb(46, 47, 48);
+}
 table.darkTable td, table.darkTable th {
   border: 1px solid #FFFFFF;
   padding: 3px 2px;
@@ -36,3 +39,9 @@ table.darkTable thead th:first-child {
 table.darkTable tfoot td {
   font-size: 12px;
 }
+table.darkTable th.D, table.darkTable td.D {
+  background-color: rgb(40, 60, 80);
+  font-weight: bold;
+  
+}
+
