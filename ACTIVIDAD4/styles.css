@@ -1,0 +1,215 @@
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 2% 2%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "encabezado encabezado encabezado encabezado encabezado encabezado"
+    "pista1 pista1 pista2 pista2 pista3 pista3"
+    "pista1 pista1 pista2 pista2 pista3 pista3"
+    "pista1 pista1 pista2 pista2 pista3 pista3"
+    "pista1 pista1 pista2 pista2 pista3 pista3"
+    "pista1 pista1 pista2 pista2 pista3 pista3"
+    "pista4 pista4 pista5 pista5 pista6 pista6"
+    "pista4 pista4 pista5 pista5 pista6 pista6"
+    "pista4 pista4 pista5 pista5 pista6 pista6"
+    "pista4 pista4 pista5 pista5 pista6 pista6"
+    "pista4 pista4 pista5 pista5 pista6 pista6"
+    "piedepagina piedepagina piedepagina piedepagina piedepagina piedepagina";
+}
+
+.encabezado {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo1 . nombre nombre";
+  grid-area: encabezado;
+}
+
+.logo1 { grid-area: logo1; }
+
+.nombre { grid-area: nombre; }
+
+.pista1 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen imagen"
+    "titulo1 titulo1"
+    "descripcion1 descripcion1"
+    "precio1 precio1"
+    "reservar1 cancelar1";
+  grid-area: pista1;
+}
+
+.imagen { grid-area: imagen; }
+
+.titulo1 { grid-area: titulo1; }
+
+.descripcion1 { grid-area: descripcion1; }
+
+.reservar1 { grid-area: reservar1; }
+
+.cancelar1 { grid-area: cancelar1; }
+
+.precio1 { grid-area: precio1; }
+
+.pista3 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen3 imagen3"
+    "titulo3 titulo3"
+    "descripcion3 descripcion3"
+    "precio3 precio3"
+    "reserva3 cancelar3";
+  grid-area: pista3;
+}
+
+.imagen3 { grid-area: imagen3; }
+
+.titulo3 { grid-area: titulo3; }
+
+.descripcion3 { grid-area: descripcion3; }
+
+.precio3 { grid-area: precio3; }
+
+.reserva3 { grid-area: reserva3; }
+
+.cancelar3 { grid-area: cancelar3; }
+
+.pista4 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen4 imagen4"
+    "titulo4 titulo4"
+    "descripcion4 descripcion4"
+    "precio4 precio4"
+    "reserva4 cancelar4";
+  grid-area: pista4;
+}
+
+.imagen4 { grid-area: imagen4; }
+
+.titulo4 { grid-area: titulo4; }
+
+.descripcion4 { grid-area: descripcion4; }
+
+.precio4 { grid-area: precio4; }
+
+.reserva4 { grid-area: reserva4; }
+
+.cancelar4 { grid-area: cancelar4; }
+
+.pista5 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen5 imagen5"
+    "titulo5 titulo5"
+    "descripcion5 descripcion5"
+    "precio5 precio5"
+    "reserva5 cancelar5";
+  grid-area: pista5;
+}
+
+.imagen5 { grid-area: imagen5; }
+
+.titulo5 { grid-area: titulo5; }
+
+.descripcion5 { grid-area: descripcion5; }
+
+.precio5 { grid-area: precio5; }
+
+.reserva5 { grid-area: reserva5; }
+
+.cancelar5 { grid-area: cancelar5; }
+
+.pista6 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen6 imagen6"
+    "titulo6 titulo6"
+    "descripcion6 descripcion6"
+    "precio6 precio6"
+    "reserva6 cancelar6";
+  grid-area: pista6;
+}
+
+.imagen6 { grid-area: imagen6; }
+
+.titulo6 { grid-area: titulo6; }
+
+.descripcion6 { grid-area: descripcion6; }
+
+.precio6 { grid-area: precio6; }
+
+.reserva6 { grid-area: reserva6; }
+
+.cancelar6 { grid-area: cancelar6; }
+
+.piedepagina {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . direccion"
+    ". horarios direccion";
+  grid-area: piedepagina;
+}
+
+.direccion { grid-area: direccion; }
+
+.horarios { grid-area: horarios; }
+
+.pista2 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen2 imagen2"
+    "titulo2 titulo2"
+    "descripcion2 descripcion2"
+    "precio2 precio2"
+    "reserva2 cancelar2";
+  grid-area: pista2;
+}
+
+.imagen2 { grid-area: imagen2; }
+
+.titulo2 { grid-area: titulo2; }
+
+.descripcion2 { grid-area: descripcion2; }
+
+.precio2 { grid-area: precio2; }
+
+.reserva2 { grid-area: reserva2; }
+
+.cancelar2 { grid-area: cancelar2; }
+.nombre{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: aliceblue;
+}
+.encabezado{
+    background-color: black;
+    padding-bottom: -20%;
+}
