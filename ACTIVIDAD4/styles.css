@@ -1,33 +1,45 @@
 .container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-auto-columns: 1fr;
-  gap: 2% 2%;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "encabezado encabezado encabezado encabezado encabezado encabezado"
-    "pista1 pista1 pista2 pista2 pista3 pista3"
-    "pista1 pista1 pista2 pista2 pista3 pista3"
-    "pista1 pista1 pista2 pista2 pista3 pista3"
-    "pista1 pista1 pista2 pista2 pista3 pista3"
-    "pista1 pista1 pista2 pista2 pista3 pista3"
-    "pista4 pista4 pista5 pista5 pista6 pista6"
-    "pista4 pista4 pista5 pista5 pista6 pista6"
-    "pista4 pista4 pista5 pista5 pista6 pista6"
-    "pista4 pista4 pista5 pista5 pista6 pista6"
-    "pista4 pista4 pista5 pista5 pista6 pista6"
-    "piedepagina piedepagina piedepagina piedepagina piedepagina piedepagina";
-}
-
-.encabezado {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "logo1 . nombre nombre";
-  grid-area: encabezado;
+    "encabezado encabezado encabezado"
+    "pista1 pista2 pista3"
+    "pista4 pista5 pista6"
+    "piedepagina piedepagina piedepagina";
 }
+
+.encabezado {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo1 nombre .";
+  grid-area: encabezado;
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  height: 80px;
+  margin-bottom: 5%;
+  position: static;
+  width: 100%;
+  color: white;
+  
+}
+.descripcion0{
+  font-size: x-small;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 4%;
+  right: 60%;
+}
+
 
 .logo1 { grid-area: logo1; }
 
@@ -35,11 +47,11 @@
 
 .pista1 {  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "imagen imagen"
+    "imagen1 imagen1"
     "titulo1 titulo1"
     "descripcion1 descripcion1"
     "precio1 precio1"
@@ -47,140 +59,21 @@
   grid-area: pista1;
 }
 
-.imagen { grid-area: imagen; }
+.imagen1 { grid-area: imagen1; }
 
 .titulo1 { grid-area: titulo1; }
 
 .descripcion1 { grid-area: descripcion1; }
 
+.precio1 { grid-area: precio1; }
+
 .reservar1 { grid-area: reservar1; }
 
 .cancelar1 { grid-area: cancelar1; }
 
-.precio1 { grid-area: precio1; }
-
-.pista3 {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagen3 imagen3"
-    "titulo3 titulo3"
-    "descripcion3 descripcion3"
-    "precio3 precio3"
-    "reserva3 cancelar3";
-  grid-area: pista3;
-}
-
-.imagen3 { grid-area: imagen3; }
-
-.titulo3 { grid-area: titulo3; }
-
-.descripcion3 { grid-area: descripcion3; }
-
-.precio3 { grid-area: precio3; }
-
-.reserva3 { grid-area: reserva3; }
-
-.cancelar3 { grid-area: cancelar3; }
-
-.pista4 {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagen4 imagen4"
-    "titulo4 titulo4"
-    "descripcion4 descripcion4"
-    "precio4 precio4"
-    "reserva4 cancelar4";
-  grid-area: pista4;
-}
-
-.imagen4 { grid-area: imagen4; }
-
-.titulo4 { grid-area: titulo4; }
-
-.descripcion4 { grid-area: descripcion4; }
-
-.precio4 { grid-area: precio4; }
-
-.reserva4 { grid-area: reserva4; }
-
-.cancelar4 { grid-area: cancelar4; }
-
-.pista5 {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagen5 imagen5"
-    "titulo5 titulo5"
-    "descripcion5 descripcion5"
-    "precio5 precio5"
-    "reserva5 cancelar5";
-  grid-area: pista5;
-}
-
-.imagen5 { grid-area: imagen5; }
-
-.titulo5 { grid-area: titulo5; }
-
-.descripcion5 { grid-area: descripcion5; }
-
-.precio5 { grid-area: precio5; }
-
-.reserva5 { grid-area: reserva5; }
-
-.cancelar5 { grid-area: cancelar5; }
-
-.pista6 {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagen6 imagen6"
-    "titulo6 titulo6"
-    "descripcion6 descripcion6"
-    "precio6 precio6"
-    "reserva6 cancelar6";
-  grid-area: pista6;
-}
-
-.imagen6 { grid-area: imagen6; }
-
-.titulo6 { grid-area: titulo6; }
-
-.descripcion6 { grid-area: descripcion6; }
-
-.precio6 { grid-area: precio6; }
-
-.reserva6 { grid-area: reserva6; }
-
-.cancelar6 { grid-area: cancelar6; }
-
-.piedepagina {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . direccion"
-    ". horarios direccion";
-  grid-area: piedepagina;
-}
-
-.direccion { grid-area: direccion; }
-
-.horarios { grid-area: horarios; }
-
 .pista2 {  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -188,7 +81,7 @@
     "titulo2 titulo2"
     "descripcion2 descripcion2"
     "precio2 precio2"
-    "reserva2 cancelar2";
+    "reservar2 cancelar2";
   grid-area: pista2;
 }
 
@@ -200,43 +93,322 @@
 
 .precio2 { grid-area: precio2; }
 
-.reserva2 { grid-area: reserva2; }
+.reservar2 { grid-area: reservar2; }
 
 .cancelar2 { grid-area: cancelar2; }
-.nombre{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: xx-large;
-    font-weight: bold;
-    color: aliceblue;
+
+.pista3 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen3 imagen3"
+    "titulo3 titulo3"
+    "descripcion3 descripcion3"
+    "precio3 precio3"
+    "reservar3 cancelar3";
+  grid-area: pista3;
 }
-.encabezado{
-    background-color: black;
-    height: 25%;
+
+.imagen3 { grid-area: imagen3; }
+
+.titulo3 { grid-area: titulo3; }
+
+.descripcion3 { grid-area: descripcion3; }
+
+.precio3 { grid-area: precio3; }
+
+.reservar3 { grid-area: reservar3; }
+
+.cancelar3 { grid-area: cancelar3; }
+
+.pista4 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen4 imagen4"
+    "titulo4 titulo4"
+    "descripcion4 descripcion4"
+    "precio4 precio4"
+    "reservar4 cancelar4";
+  grid-area: pista4;
 }
-.pista1 , .pista2 , .pista3 {
-  background-color: rgb(105, 197, 197);
+
+.imagen4 { grid-area: imagen4; }
+
+.titulo4 { grid-area: titulo4; }
+
+.descripcion4 { grid-area: descripcion4; }
+
+.precio4 { grid-area: precio4; }
+
+.reservar4 { grid-area: reservar4; }
+
+.cancelar4 { grid-area: cancelar4; }
+
+.pista5 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+ grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen5 imagen5"
+    "titulo5 titulo5"
+    "descripcion5 descripcion5"
+    "precio5 precio5"
+    "reservar5 cancelar5";
+  grid-area: pista5;
+}
+
+.imagen5 { grid-area: imagen5; }
+
+.titulo5 { grid-area: titulo5; }
+
+.descripcion5 { grid-area: descripcion5; }
+
+.precio5 { grid-area: precio5; }
+
+.reservar5 { grid-area: reservar5; }
+
+.cancelar5 { grid-area: cancelar5; }
+
+.pista6 {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagen6 imagen6"
+    "titulo6 titulo6"
+    "descripcion6 descripcion6"
+    "precio6 precio6"
+    "reservar6 cancelar6";
+  grid-area: pista6;
+}
+
+.imagen6 { grid-area: imagen6; }
+
+.titulo6 { grid-area: titulo6; }
+
+.descripcion6 { grid-area: descripcion6; }
+
+.precio6 { grid-area: precio6; }
+
+.reservar6 { grid-area: reservar6; }
+
+.cancelar6 { grid-area: cancelar6; }
+
+.piedepagina { grid-area: piedepagina; }
+
+
+
+.pista1 , .pista2, .pista3 {
+  background-color: rgb(216, 216, 216);
   border-radius: 5%;
-  height: 25%;
-  position: relative;
-  bottom: 10%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 10%;
+  height: 70%;
+
 
 }
-.pista4 , .pista5 {
-  background-color: rgb(105, 197, 197);
+.pista4, .pista5{
+  background-color: rgb(216, 216, 216);
   border-radius: 5%;
-  height: 25%;
-  position: relative;
-  bottom: 85%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 10%;
+  height: 70%;
 }
+
 .pista6{
-  background-color: rgb(37, 68, 68);
+  background-color: rgb(48, 81, 81);
   border-radius: 5%;
-  height: 25%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-bottom: 10%;
+  height: 70%;
+}
+
+#logo{
+  height: 6%;
+}
+.imgpista{
+  margin: 6%;
+  
+  height: 60%;
+}
+.titulo2, .titulo3, .titulo4, .titulo6{
+  justify-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
   position: relative;
-  bottom: 85%;
+  bottom: 200%;
   
 }
-#logo{
-  height: 20%;
-  width: 20%;
+.titulo1, .titulo5{
+  justify-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  position: relative;
+  bottom: 165%;
+  margin-left: 6%;
+}
+
+.piedepagina{
+  background-color: rgb(0, 0, 0);
+  height: 50px;
+  position: sticky;
+  width: 100%;
+  bottom: 0%;
+  top: 100%;
+
+}
+
+.reservar1 {
+  justify-items: center;
+  background-color: rgba(41, 211, 55, 0.884);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 200%;
+  margin: 6%;
+}
+.cancelar1{
+  justify-items: center;
+  background-color: rgba(211, 41, 41, 0.882);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 200%;
+  margin: 6%;
+}
+.reservar2{
+  justify-items: center;
+  background-color: rgba(41, 211, 55, 0.884);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.cancelar2{
+  justify-items: center;
+  background-color: rgba(211, 41, 41, 0.882);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.reservar3{
+  justify-items: center;
+  background-color: rgba(41, 211, 55, 0.884);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.cancelar3{
+  justify-items: center;
+  background-color: rgba(211, 41, 41, 0.882);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.reservar4{
+  justify-items: center;
+  background-color: rgba(41, 211, 55, 0.884);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.cancelar4{
+  justify-items: center;
+  background-color: rgba(211, 41, 41, 0.882);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.reservar5{
+  justify-items: center;
+  background-color: rgba(41, 211, 55, 0.884);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 215%;
+  margin: 6%;
+}
+.cancelar5{
+  justify-items: center;
+  background-color: rgba(211, 41, 41, 0.882);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 215%;
+  margin: 6%;
+}
+.reservar6{
+  justify-items: center;
+  background-color: rgba(41, 211, 55, 0.253);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.cancelar6{
+  justify-items: center;
+  background-color: rgba(211, 41, 41, 0.17);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 10%;
+  position: relative;
+  bottom: 175%;
+  margin: 6%;
+}
+.direccion{
+  font-size: x-small;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+
 }
