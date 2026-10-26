@@ -1,54 +1,70 @@
 .container {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 0.6fr 1.4fr; 
-  gap: 0px 0px; 
+  grid-template-rows: auto auto; 
+  gap: 0%;
+  grid-auto-flow: row;
+  width: 100%;
+  height: auto;
   grid-template-areas: 
     "cajalogo1 cajalogo2 cajalogo3 cajalogo4 cajalogo5"
     "textologo1 textologo2 textologo3 textologo4 textologo5"; 
 }
-.cajalogo1 { grid-area: cajalogo1; }
-.cajalogo2 { grid-area: cajalogo2; }
-.cajalogo3 { grid-area: cajalogo3; }
-.cajalogo4 { grid-area: cajalogo4; }
-.cajalogo5 { grid-area: cajalogo5; }
-.textologo1 { grid-area: textologo1; }
-.textologo2 { grid-area: textologo2; }
-.textologo3 { grid-area: textologo3; }
-.textologo4 { grid-area: textologo4; }
+.cajalogo1 {
+   grid-area: cajalogo1; }
+.cajalogo2 {
+   grid-area: cajalogo2; }
+.cajalogo3 {
+   grid-area: cajalogo3; }
+.cajalogo4 { 
+  grid-area: cajalogo4; }
+.cajalogo5 { 
+  grid-area: cajalogo5; }
+.textologo1 { 
+  grid-area: textologo1; }
+.textologo2 { 
+  grid-area: textologo2; }
+.textologo3 { 
+  grid-area: textologo3; }
+.textologo4 { 
+  grid-area: textologo4; }
 .textologo5 { grid-area: textologo5; }
 
+
 .cajalogo1, .cajalogo2, .cajalogo3, .cajalogo4, .cajalogo5{
-  
-  padding-right: 35%;
+  display: flex;
+  justify-content: center;
+  position: relative;
   padding-left: 10%;
+  padding-right: 10%;
 }
 
 .circulogris{
     background-color: rgb(242, 242, 242);
     border-radius: 50%;
-    height: 38%;
-    width: 150%;
+    width: 100%;
     overflow: hidden;
-    z-index: 1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img{
   width: 120%;
   height: 130%;
+  object-fit:contain;
+  display: flex;
 }
 .circulorojo{
   background-color: rgb(247, 49, 82);
   border-radius: 50%;
   overflow: hidden;
-  height: 10%;
-  width: 37%;
-  position: relative;
-  top: 11%;
-  z-index: 2;
+  height: 25%;
+  width:  20%;
+  position: absolute;
+  top: 4%;
+  left: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +74,7 @@ img{
   color: rgb(253, 254, 255);
   font-size: xx-large;
   font-weight:bold ;
+  display: flex;
 }
 .textologo1, .textologo2, .textologo3, .textologo4, .textologo5 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -67,8 +84,50 @@ img{
   font-size: large;
   font-weight: bold;
   position: relative;
-  bottom: 37%;
-  left: 15%;
-  
-  
+  padding-left: 18%;
 }
+@media screen and (max-width: 100rem){
+  .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "cajalogo1" "textologo1"
+    "cajalogo2" "textologo2"
+    "cajalogo3" "textologo3"
+    "cajalogo4" "textologo4"
+    "cajalogo5" "textologo5"
+
+  
+  }
+  img{
+    width: 120%;
+    height: 130%;
+    object-fit:contain;
+    display: flex;
+  }
+  .textologo1, .textologo2, .textologo3, .textologo4, .textologo5 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(105, 104, 104);
+    align-items: flex;
+    justify-content: center; 
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    padding-left: 18%;
+  }
+
+
+}
+@media screen and (min-width: 100%) {
+  .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "cajalogo1" "textologo1"
+    "cajalogo2" "textologo2"
+    "cajalogo3" "textologo3"
+    "cajalogo4" "textologo4"
+    "cajalogo5" "textologo5"
+  }
+}
+
