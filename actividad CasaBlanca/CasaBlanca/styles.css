@@ -60,7 +60,8 @@ header h1 {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
+    left: auto;
     background-color: white;
     color: black;
     list-style: none;
@@ -155,7 +156,6 @@ footer {
     }
     .menu-desplegable{
         right: 0;
-        display: block;
         left: auto;
     }
 
@@ -177,7 +177,8 @@ footer {
     }
     .contenedor-galeria img{
         width: 100%;
-        grid-area: auto;
+        aspect-ratio: 4 / 3;
+        
 
     }
 
