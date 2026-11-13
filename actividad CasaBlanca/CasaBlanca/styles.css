@@ -19,7 +19,7 @@ header {
     max-width: 100%;
     max-height: 100%;
 }
-
+/* cambie de pixeles a porcentajes para trabajabr mejor como se enseño en clase */
 .diseno-grid img {
     max-width: 100%;
     max-height: 100%; 
@@ -44,6 +44,7 @@ header h1 {
     display: flex;
     gap: 1rem;
     width: 100%;
+    color: white;
 }
 
 .menu a {
@@ -55,16 +56,18 @@ header h1 {
 .desplegable {
     position: relative;
 }
-
+/* lo movi hacia la izquierda porque antes de que llegara a los 768px del media ya salia del recuadro y para que funcione sin romper el sistema lo gire a la izquierda desde un inicio */
 .menu-desplegable {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: white;
-    color: black;
+    right: 0;
+    left: auto;
+    background-color: rgb(206, 203, 203);
     list-style: none;
     padding: 0.5rem;
     border: 1px solid #ccc;
+    
 }
 
 .desplegable:hover .menu-desplegable {
@@ -138,6 +141,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* transforme el header en una sola columna para que todo vaya hacia abajo y tambien centre todo */
     .contenedor-header{
         display: grid;
         grid-template-columns: 1fr;
@@ -148,16 +152,17 @@ footer {
     body{
         background-color: lightgray;
     }
+    /* que las imagenes ocupen el espacio que tienen dedicado para que no se deformen */
     img{
         width: 100%;
         height: auto;
     }
+    /* el menu desplegable se queda hacia la izquierda quise mantener eso */
     .menu-desplegable{
         right: 0;
-        display: block;
         left: auto;
     }
-
+    /* alinee el menu hacia el centro */
     .menu{
         flex-direction: column;
         align-items: center;
@@ -166,17 +171,20 @@ footer {
     .diseno-grid{
         grid-template-columns: 1fr;
     }
+    /* quise mantener el 100% del espacio que tenia que ocuapar esta tabala para que no se deforme */
     table{
         width: 100%;
     }
+    /* se cambia a un grid de dos columnas hacia abajo para que aparezcan de dos en dos */
     .contenedor-galeria{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 1rem;
     }
+    /* cambie3 el aspecto de las imagenes usando su 100% de ancho y cambiando su relacion de aspecto de esta forma ya que de las otras formas uno se hacia mas grande que el otro */
     .contenedor-galeria img{
         width: 100%;
-        
+        aspect-ratio: 4 / 3;
 
     }
 
